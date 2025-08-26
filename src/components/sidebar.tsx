@@ -13,7 +13,6 @@ import { submitSubscription } from "./lib/api";
 
 const menuItems = [
   { name: "Início", href: "#inicio" },
-  { name: "Sobre Nós", href: "#sobrenos" },
   { name: "Cursos", href: "#cursos" },
   { name: "Certificação", href: "#Certificado" },
   { name: "Contato", href: "#contato" },

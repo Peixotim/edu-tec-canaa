@@ -82,13 +82,23 @@ const Footer = () => {
             <h4 className="font-semibold text-white mb-4">Links Úteis</h4>
             <ul className="space-y-3 text-sm text-[#E5E7EB]">
               <li>
-                <a href="#sobrenos" className="hover:text-[#FACC15]">
-                  Sobre Nós
+                <a href="#/" className="hover:text-[#FACC15]">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="#cursos" className="hover:text-[#FACC15]">
+                  Cursos
                 </a>
               </li>
               <li>
                 <a href="#contato" className="hover:text-[#FACC15]">
-                  Contato
+                  Contatos
+                </a>
+              </li>
+              <li>
+                <a href="#Certificado" className="hover:text-[#FACC15]">
+                  Certificado
                 </a>
               </li>
             </ul>

@@ -9,8 +9,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Seu Site de Cursos",
+  title: "EducaTec Canaã",
   description: "Cursos e certificações de qualidade",
+  icons: {
+    icon: "/images/edutec.ico",
+    shortcut: "/images/edutec.ico",
+    apple: "/images/edutec.ico", // caminho dentro de /public
+  },
 };
 
 export default function RootLayout({
