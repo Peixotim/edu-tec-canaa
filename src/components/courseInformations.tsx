@@ -6,7 +6,6 @@ import {
   Award,
   Users,
   Target,
-  Info,
   Star,
   ArrowLeft,
 } from "lucide-react";
@@ -62,6 +61,7 @@ export default function CourseInformations({
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: course.title,
+        enterpriseId: 1, //Alherar Depois
       };
 
       await submitSubscription(data);
@@ -217,10 +217,10 @@ export default function CourseInformations({
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <SubscriptionForm
-          status={formStatus}
+          formStatus={formStatus}
           onSubmit={handleFormSubmit}
           onCancel={closeModal}
-          onSuccessRedirect={handleWhatsAppRedirect} // Passa a nova função
+          onSuccessRedirect={handleWhatsAppRedirect}
           selectedContent={course.title}
         />
       </Modal>

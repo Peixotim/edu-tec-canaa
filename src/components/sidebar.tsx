@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "./lib/utils";
 import { motion, useScroll } from "framer-motion";
 import Modal from "@/components/modalContactsCourses/modal";
 import SubscriptionForm from "@/components/modalContactsCourses/SubscriptionForm";
@@ -50,6 +49,7 @@ export const Header = () => {
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: "Contato Geral (Header)",
+        enterpriseId: 1, //Alterar depois
       };
 
       await submitSubscription(data);
@@ -183,10 +183,10 @@ export const Header = () => {
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <SubscriptionForm
-          status={formStatus}
+          formStatus={formStatus}
           onSubmit={handleFormSubmit}
           onCancel={closeModal}
-          onSuccessRedirect={handleWhatsAppRedirect} // Passa a nova função
+          onSuccessRedirect={handleWhatsAppRedirect}
           selectedContent="Area Desejada"
         />
       </Modal>

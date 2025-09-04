@@ -54,6 +54,7 @@ export const HeroSection = () => {
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: "Contato Geral (Hero Section)",
+        enterpriseId: 1, //Mudar Depois
       };
 
       await submitSubscription(data);
@@ -146,7 +147,7 @@ export const HeroSection = () => {
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <SubscriptionForm
-          status={formStatus}
+          formStatus={formStatus}
           onSubmit={handleFormSubmit}
           onCancel={closeModal}
           onSuccessRedirect={handleWhatsAppRedirect} // Passa a nova função

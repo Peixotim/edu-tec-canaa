@@ -1,24 +1,18 @@
-// components/courseCard.tsx
-
 import Link from "next/link";
-// Image não é mais usado no JSX, mas o import é mantido para não quebrar a lógica se você usá-lo em outro lugar
-import Image from "next/image";
-// Ícones ajustados para o novo visual
 import { Award } from "lucide-react";
 import { slugify } from "@/utils/slugify";
 
-// --- Interface de Props com description opcional ---
-// NENHUMA ALTERAÇÃO AQUI. EXATAMENTE COMO VOCÊ MANDOU.
 export interface CourseCardProps {
   title: string;
   subTitle: string;
-  description?: string;
+
   img?: {
     src: string;
     alt: string;
   };
   rating: number;
   badge?: string;
+  description?: string;
 }
 
 // --- Componente Funcional Robusto ---
@@ -27,8 +21,6 @@ export default function CourseCard({
   title,
   subTitle,
   description,
-  img,
-  rating,
   badge,
 }: CourseCardProps) {
   return (
