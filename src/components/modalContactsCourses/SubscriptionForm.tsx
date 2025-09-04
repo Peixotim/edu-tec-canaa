@@ -103,7 +103,7 @@ export default function SubscriptionForm({
         fullerName: fullName,
         phone: whatsapp,
         areaOfInterest: interestArea,
-        enterprise_id: 1,
+        enterpriseId: 1,
       });
       setStatus("success");
     } catch (error) {
