@@ -4,7 +4,7 @@ export type SubscriptionData = {
   fullerName: string;
   phone: string;
   areaOfInterest: string;
-  enterprise_id: number
+  enterpriseId: number
 };
 
 // Renova token e salva no localStorage
