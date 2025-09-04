@@ -29,7 +29,7 @@ export const Header = () => {
   );
   const [whatsappMessage, setWhatsappMessage] = useState("");
 
-  const WHATSAPP_NUMBER = "5531999999999"; // 👈 SUBSTITUA PELO SEU NÚMERO
+  const WHATSAPP_NUMBER = "5531985051313"; // 👈 SUBSTITUA PELO SEU NÚMERO
 
   const openModal = () => {
     setFormStatus("form");

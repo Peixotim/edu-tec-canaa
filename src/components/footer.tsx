@@ -11,9 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#5A1026] text-white">
       <div className="container mx-auto px-4 py-16">
-        {/* Grid principal */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Coluna 1: Logo e Redes Sociais */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-[#FACC15] rounded-lg flex items-center justify-center shadow-lg">
@@ -45,7 +43,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Coluna 2 */}
           <div>
             <h4 className="font-semibold text-white mb-4">Cursos</h4>
             <ul className="space-y-3 text-sm text-[#E5E7EB]">
@@ -123,8 +120,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5" />
-                <a href="tel:+5531999999999" className="hover:text-[#FACC15]">
-                  (31) 98681-3351
+                <a href="tel:+5531985051313" className="hover:text-[#FACC15]">
+                  (31)98505-1313
                 </a>
               </li>
             </ul>

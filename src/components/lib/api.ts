@@ -17,7 +17,6 @@ export async function refreshToken(): Promise<string> {
       clientSecret: process.env.CLIENT_SECRET,
     }),
   });
-
   if (!response.ok) {
     const errorData = await response.json();
     throw new Error(errorData.message || "Falha ao gerar token.");

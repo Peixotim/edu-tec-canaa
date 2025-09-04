@@ -27,14 +27,13 @@ const FeatureItem: FC<{ icon: React.ReactNode; text: string }> = ({
 );
 
 export const HeroSection = () => {
-  // --- LÓGICA DO MODAL ATUALIZADA ---
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formStatus, setFormStatus] = useState<"form" | "loading" | "success">(
     "form"
   );
   const [whatsappMessage, setWhatsappMessage] = useState("");
 
-  const WHATSAPP_NUMBER = "5531999999999"; // 👈 SUBSTITUA PELO SEU NÚMERO
+  const WHATSAPP_NUMBER = "5531985051313";
 
   const openModal = () => {
     setFormStatus("form");
