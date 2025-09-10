@@ -8,6 +8,7 @@ import { useState } from "react";
 import SearchSection from "@/components/serarch";
 import CardPage from "@/components/cards";
 import Contact from "@/components/contact";
+import MotivacionalSection from "@/components/MotivacionalSection";
 export default function Home() {
   const cardProps = Storaged();
 
@@ -46,9 +47,9 @@ export default function Home() {
       <header className="">
         <Header />
       </header>
-      <main className="mt-20">
+      <main className="mt-18">
         <HeroSection />
-
+        <MotivacionalSection />
         <SearchSection
           searchTerm={searchTerm}
           onSearchChange={(e) => setSearchTerm(e.target.value)}

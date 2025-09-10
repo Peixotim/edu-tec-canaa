@@ -1,7 +1,7 @@
-// Em seu arquivo: ./modalContactsCourses/SubscriptionForm.tsx
-
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Loader2, CheckCircle, Send, ArrowRight } from "lucide-react";
+import LgpdCheckbox from "../LgpdCheckbox";
 
 interface SubscriptionFormProps {
   formStatus: "form" | "loading" | "success";
@@ -18,6 +18,37 @@ export default function SubscriptionForm({
   onCancel,
   onSuccessRedirect,
 }: SubscriptionFormProps) {
+  const [whatsapp, setWhatsapp] = useState("");
+  const [lgpdAccepted, setLgpdAccepted] = useState(false);
+  const [error, setError] = useState("");
+
+  // Máscara de WhatsApp
+  const handleWhatsappChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value.replace(/\D/g, "");
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length <= 10) {
+      value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+    } else {
+      value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3");
+    }
+    setWhatsapp(value);
+  };
+
+  // Garantir que só envia se LGPD for aceito
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!lgpdAccepted) {
+      setError(
+        "Você precisa aceitar a Política de Privacidade para continuar."
+      );
+      return;
+    }
+    setError("");
+    onSubmit(e);
+  };
+
+  // ====== Estados especiais (loading / success) ======
   if (formStatus === "loading") {
     return (
       <div className="flex flex-col items-center justify-center p-8 min-h-[450px]">
@@ -59,6 +90,7 @@ export default function SubscriptionForm({
     );
   }
 
+  // ====== Formulário principal ======
   return (
     <div className="p-8 bg-slate-50/50">
       <div className="text-center mb-8">
@@ -73,7 +105,8 @@ export default function SubscriptionForm({
         </p>
       </div>
 
-      <form onSubmit={onSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-5">
+        {/* Nome */}
         <div>
           <label
             htmlFor="name"
@@ -90,6 +123,8 @@ export default function SubscriptionForm({
             className="mt-1 block w-full px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
           />
         </div>
+
+        {/* WhatsApp */}
         <div>
           <label
             htmlFor="whatsapp"
@@ -102,10 +137,15 @@ export default function SubscriptionForm({
             name="whatsapp"
             id="whatsapp"
             required
+            value={whatsapp}
+            onChange={handleWhatsappChange}
             placeholder="(XX) XXXXX-XXXX"
+            maxLength={15}
             className="mt-1 block w-full px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
           />
         </div>
+
+        {/* Área de interesse */}
         <div>
           <label
             htmlFor="interestArea"
@@ -123,14 +163,30 @@ export default function SubscriptionForm({
           />
         </div>
 
+        {/* LGPD */}
+        <LgpdCheckbox
+          checked={lgpdAccepted}
+          onChange={(checked: boolean) => setLgpdAccepted(checked)}
+        />
+
+        {/* Erro se não aceitar */}
+        {error && <p className="text-sm text-red-600">{error}</p>}
+
+        {/* Botões */}
         <div className="pt-6 space-y-4">
           <button
             type="submit"
-            className="group w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#8B1A3B] to-[#6A0E29] px-4 py-3 text-lg font-bold text-white shadow-lg shadow-[#8B1A3B]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#8B1A3B]/50 hover:-translate-y-1"
+            disabled={!lgpdAccepted}
+            className={`group w-full flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-lg font-bold text-white transition-all duration-300 ${
+              lgpdAccepted
+                ? "bg-gradient-to-br from-[#8B1A3B] to-[#6A0E29] shadow-lg shadow-[#8B1A3B]/30 hover:shadow-xl hover:shadow-[#8B1A3B]/50 hover:-translate-y-1"
+                : "bg-zinc-400 cursor-not-allowed"
+            }`}
           >
             <span>Quero me Inscrever</span>
-            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5" />
           </button>
+
           <button
             type="button"
             onClick={onCancel}

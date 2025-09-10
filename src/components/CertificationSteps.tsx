@@ -4,11 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle, Zap } from "lucide-react";
 
-// -------------------------------------------------------------------
-// PARTE 1: O COMPONENTE DE ETAPAS QUE VOCÊ JÁ TINHA
-// (Coloquei aqui dentro para o arquivo ficar completo e fácil de usar)
-// -------------------------------------------------------------------
-
 const steps = [
   {
     id: 1,

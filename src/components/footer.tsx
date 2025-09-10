@@ -134,6 +134,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Educatec Canaã. Todos os direitos
             reservados.
           </p>
+          <p className="text-sm text-[#E5E7EB]">CPNJ : 62.315.934/0001-70</p>
         </div>
       </div>
     </footer>

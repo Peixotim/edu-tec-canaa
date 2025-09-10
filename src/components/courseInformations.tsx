@@ -61,7 +61,7 @@ export default function CourseInformations({
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: course.title,
-        enterpriseId: 1, //Alherar Depois
+        enterpriseId: 1, //Alterar Depois
       };
 
       await submitSubscription(data);
