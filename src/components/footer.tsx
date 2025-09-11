@@ -31,14 +31,11 @@ const Footer = () => {
               do futuro.
             </p>
             <div className="flex space-x-4 pt-2">
-              <a href="#" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/educatec.canaa"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5 text-[#E5E7EB] hover:text-[#FACC15] transition-colors" />
-              </a>
-              <a href="#" aria-label="Linkedin">
-                <Linkedin className="w-5 h-5 text-[#E5E7EB] hover:text-[#FACC15] transition-colors" />
-              </a>
-              <a href="#" aria-label="Facebook">
-                <Facebook className="w-5 h-5 text-[#E5E7EB] hover:text-[#FACC15] transition-colors" />
               </a>
             </div>
           </div>
