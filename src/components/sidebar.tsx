@@ -45,16 +45,16 @@ export const Header = () => {
     try {
       const formData = new FormData(event.currentTarget);
       const data = {
-        fullerName: formData.get("name") as string,
+        name: formData.get("name") as string,
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: "Contato Geral (Header)",
-        enterpriseId: 1, //Alterar depois
+        enterpriseId: 4, //Alterar depois
       };
 
       await submitSubscription(data);
 
-      const message = `Olá! Meu nome é ${data.fullerName} e tenho interesse na área de ${data.areaOfInterest}. Gostaria de mais informações.`;
+      const message = `Olá! Meu nome é ${data.name} e tenho interesse na área de ${data.areaOfInterest}. Gostaria de mais informações.`;
       setWhatsappMessage(message);
 
       setFormStatus("success");

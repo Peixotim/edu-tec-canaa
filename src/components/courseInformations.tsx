@@ -57,16 +57,16 @@ export default function CourseInformations({
     try {
       const formData = new FormData(event.currentTarget);
       const data = {
-        fullerName: formData.get("name") as string,
+        name: formData.get("name") as string,
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: course.title,
-        enterpriseId: 1, //Alterar Depois
+        enterpriseId: 4, //Alterar Depois
       };
 
       await submitSubscription(data);
 
-      const message = `Olá! Meu nome é ${data.fullerName} e tenho interesse no curso de ${data.course}. Gostaria de mais informações sobre a matrícula.`;
+      const message = `Olá! Meu nome é ${data.name} e tenho interesse no curso de ${data.course}. Gostaria de mais informações sobre a matrícula.`;
       setWhatsappMessage(message);
 
       setFormStatus("success");
