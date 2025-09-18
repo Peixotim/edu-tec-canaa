@@ -10,7 +10,7 @@ export default function Contact() {
       icon: <MessageCircle className="w-6 h-6 text-green-600" />,
       label: "Telefone Suporte",
       value: "(31) 98505-1313",
-      href: "https://wa.me/5531985051313", // link do WhatsApp
+      href: "https://wa.me/31999022636", // link do WhatsApp
     },
     {
       icon: <Mail className="w-6 h-6 text-red-500" />,
