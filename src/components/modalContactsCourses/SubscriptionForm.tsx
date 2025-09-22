@@ -110,7 +110,7 @@ export default function SubscriptionForm({
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-slate-700 mb-1"
+            className="block text-sm font-medium text-black mb-1"
           >
             Nome Completo
           </label>
@@ -120,7 +120,7 @@ export default function SubscriptionForm({
             id="name"
             required
             placeholder="Seu nome aqui"
-            className="mt-1 block w-full px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
+            className="mt-1 block w-full text-black px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
           />
         </div>
 
@@ -128,7 +128,7 @@ export default function SubscriptionForm({
         <div>
           <label
             htmlFor="whatsapp"
-            className="block text-sm font-medium text-slate-700 mb-1"
+            className="block text-sm font-medium text-black mb-1"
           >
             WhatsApp
           </label>
@@ -141,7 +141,7 @@ export default function SubscriptionForm({
             onChange={handleWhatsappChange}
             placeholder="(XX) XXXXX-XXXX"
             maxLength={15}
-            className="mt-1 block w-full px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
+            className="mt-1 block w-full px-4 py-3 text-black rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
           />
         </div>
 
@@ -149,7 +149,7 @@ export default function SubscriptionForm({
         <div>
           <label
             htmlFor="interestArea"
-            className="block text-sm font-medium text-slate-700 mb-1"
+            className="block text-sm font-medium text-black mb-1"
           >
             Área de Interesse
           </label>
@@ -159,7 +159,7 @@ export default function SubscriptionForm({
             id="interestArea"
             required
             placeholder="Ex: Saúde, Tecnologia, Gestão"
-            className="mt-1 block w-full px-4 py-3 rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
+            className="mt-1 block w-full px-4 py-3 text-black rounded-xl border-slate-300 bg-white shadow-sm transition-colors duration-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50"
           />
         </div>
 

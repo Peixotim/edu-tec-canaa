@@ -9,11 +9,13 @@ import { motion, useScroll } from "framer-motion";
 import Modal from "@/components/modalContactsCourses/modal";
 import SubscriptionForm from "@/components/modalContactsCourses/SubscriptionForm";
 import { submitSubscription } from "./lib/api";
+import { isHmrRefresh } from "next/dist/server/app-render/work-unit-async-storage.external";
 
 const menuItems = [
   { name: "Início", href: "#inicio" },
   { name: "Cursos", href: "#cursos" },
   { name: "Certificação", href: "#Certificado" },
+  { name: "SISTEC-MEC", href: "/sistec" },
   { name: "Contato", href: "#contato" },
 ];
 

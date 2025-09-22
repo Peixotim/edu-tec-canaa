@@ -95,6 +95,11 @@ const Footer = () => {
                   Certificado
                 </a>
               </li>
+              <li>
+                <a href="/sistec" className="hover:text-[#FACC15]">
+                  SISTEC-MEC
+                </a>
+              </li>
             </ul>
           </div>
 
