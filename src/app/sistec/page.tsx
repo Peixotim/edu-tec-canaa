@@ -89,6 +89,8 @@ export default function PageSistecMec() {
                   </li>
                 ))}
               </ul>
+
+              {/* COMO CONSULTAR NO MEC */}
             </div>
 
             {/* Coluna direita: Cartão + Comprovante visual SISTEC */}
@@ -157,7 +159,6 @@ export default function PageSistecMec() {
           <h2 className="text-2xl sm:text-3xl font-extrabold">
             Perguntas <span className="text-[#FFC107]">Frequentes</span>
           </h2>
-          {/* ...resto do FAQ igual... */}
           <div className="mt-6 divide-y divide-white/10 rounded-2xl bg-white/5 ring-1 ring-white/10">
             {FAQ.map((f) => (
               <details key={f.q} className="group p-5">
@@ -173,7 +174,78 @@ export default function PageSistecMec() {
           </div>
         </div>
       </section>
+      <section className="mt-12 rounded-2xl bg-[#4B0C17] p-6 ring-1 ring-white/10">
+        <h2 className="text-xl sm:text-2xl font-extrabold text-center">
+          Como{" "}
+          <span className="text-[#FFC107]">Consultar nossa Instituição</span> no
+          MEC
+        </h2>
+        <p className="mt-4 text-white/80 text-center leading-relaxed max-w-2xl mx-auto">
+          A transparência é parte da nossa essência. Para validar que você está
+          escolhendo uma instituição séria e reconhecida, siga o passo a passo
+          abaixo:
+        </p>
 
+        <ol className="mt-6 space-y-4 max-w-2xl mx-auto">
+          <li className="flex items-start gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FFC107] font-bold text-[#5B0F1B]">
+              1
+            </span>
+            <span>
+              Acesse o portal oficial do{" "}
+              <Link
+                href="https://sistec.mec.gov.br/consultapublicaunidadeensino#"
+                target="_blank"
+                className="font-semibold text-[#FFC107] hover:underline"
+              >
+                SISTEC/MEC
+              </Link>
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FFC107] font-bold text-[#5B0F1B]">
+              2
+            </span>
+            <span>
+              Clique em{" "}
+              <strong>Consulta Pública de Instituição de Ensino</strong>
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FFC107] font-bold text-[#5B0F1B]">
+              3
+            </span>
+            <span>
+              Selecione o estado <strong>Pará</strong> e depois a cidade{" "}
+              <strong>Canaã dos Carajás</strong>
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FFC107] font-bold text-[#5B0F1B]">
+              4
+            </span>
+            <span>
+              Escolha a instituição <strong>Sistema de Ensino Integrado</strong>
+            </span>
+          </li>
+        </ol>
+
+        <div className="mt-6 flex flex-col items-center gap-3">
+          <p className="text-white/80 text-center max-w-2xl">
+            Pronto! Em poucos cliques você confirma nossa aprovação no MEC e tem
+            a certeza de que está fazendo parte de uma instituição segura,
+            legítima e sem ciladas.
+          </p>
+          <Link
+            href="https://sistec.mec.gov.br/consultapublicaunidadeensino"
+            target="_blank"
+            className="inline-flex items-center justify-center rounded-2xl bg-[#FFC107] px-5 py-3 font-semibold text-[#5B0F1B] shadow-md shadow-black/10 transition hover:scale-[1.02] hover:shadow-lg"
+          >
+            Verificar agora no MEC
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </section>
       {/* CTA FINAL */}
       <section className="py-12">
         <div className="container mx-auto max-w-6xl px-6">
@@ -202,7 +274,6 @@ export default function PageSistecMec() {
               </ConsultorModalTrigger>
             </div>
           </div>
-          {/* Removido o <Image fill /> solto do final */}
         </div>
       </section>
     </main>
