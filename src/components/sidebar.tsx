@@ -50,7 +50,7 @@ export const Header = () => {
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: "Contato Geral (Header)",
-        enterpriseId: 4, //Alterar depois
+        enterpriseId: Number(process.env.NEXT_PUBLIC_ENTERPRISE_ID), //Alterar depois
       };
 
       await submitSubscription(data);

@@ -53,7 +53,7 @@ export const HeroSection = () => {
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: "Contato Geral (Hero Section)",
-        enterpriseId: 4, //Mudar Depois
+        enterpriseId: Number(process.env.NEXT_PUBLIC_ENTERPRISE_ID), //Mudar Depois
       };
 
       await submitSubscription(data);

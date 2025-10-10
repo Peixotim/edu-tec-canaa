@@ -205,6 +205,6 @@ export function buildSubscriptionFromForm(
   const name = ((fd.get("name") as string) || "").trim();
   const areaOfInterest = ((fd.get("interestArea") as string) || "").trim();
   const phone = normalizePhone((fd.get("whatsapp") as string) || "");
-  const enterpriseId = toSafeNumber(process.env.NEXT_PUBLIC_ENTERPRISE_ID, 1);
+  const enterpriseId = toSafeNumber(process.env.NEXT_PUBLIC_ENTERPRISE_ID);
   return { name, areaOfInterest, phone, enterpriseId };
 }

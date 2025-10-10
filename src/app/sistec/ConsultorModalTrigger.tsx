@@ -42,7 +42,7 @@ export default function ConsultorModalTrigger({
         phone: (formData.get("whatsapp") as string).replace(/\D/g, ""),
         areaOfInterest: formData.get("interestArea") as string,
         course: selectedContent,
-        enterpriseId: 4,
+        enterpriseId: Number(process.env.NEXT_PUBLIC_ENTERPRISE_ID),
       };
 
       await submitSubscription(data);
