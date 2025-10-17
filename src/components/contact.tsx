@@ -9,8 +9,8 @@ export default function Contact() {
     {
       icon: <MessageCircle className="w-6 h-6 text-green-600" />,
       label: "Telefone Suporte",
-      value: "(31) 98505-1313",
-      href: "https://wa.me/31999022636", // link do WhatsApp
+      value: "(94) 92740525",
+      href: "https://wa.me/559492740525", // link do WhatsApp
     },
     {
       icon: <Mail className="w-6 h-6 text-red-500" />,
@@ -27,7 +27,7 @@ export default function Contact() {
     {
       icon: <MapPin className="w-6 h-6 text-green-600" />,
       label: "Endereço",
-      value: "Canaã dos Carajás, 94, Bairro Vale Dourado, Pará",
+      value: "Rua Castanheira, Qd 10 - Lt 35 - Centro - Canaã dos Carajás-PA",
       href: "https://www.google.com/maps/search/?api=1&query=Canaã+dos+Carajás,+94,+Vale+Dourado,+Pará",
     },
   ];

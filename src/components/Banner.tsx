@@ -33,7 +33,7 @@ export const HeroSection = () => {
   );
   const [whatsappMessage, setWhatsappMessage] = useState("");
 
-  const WHATSAPP_NUMBER = "5531999022636";
+  const WHATSAPP_NUMBER = "559492740525";
 
   const openModal = () => {
     setFormStatus("form");

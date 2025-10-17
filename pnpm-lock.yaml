@@ -27,8 +27,8 @@ importers:
         specifier: 15.5.0
         version: 15.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       pnpm:
-        specifier: ^10.15.0
-        version: 10.15.0
+        specifier: ^10.18.3
+        version: 10.18.3
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -1570,8 +1570,8 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
-  pnpm@10.15.0:
-    resolution: {integrity: sha512-SG68JZ0+mZpOhpHOA7XKxKccvso5Nyqbdiy1AM/fCHPiyxar49lRse4s8BJQPwJ7mLZYTk3yJSTgx0UNnseqew==}
+  pnpm@10.18.3:
+    resolution: {integrity: sha512-u9FubXKG/X4B9rPAs8kyzaKWXAapCDKPdGY/EKmupR8RKe6mFRNL+ZKDGwCeq+Fn7LcAi1l/QP+bx1lGqt+wjQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -3466,7 +3466,7 @@ snapshots:
 
   picomatch@4.0.3: {}
 
-  pnpm@10.15.0: {}
+  pnpm@10.18.3: {}
 
   possible-typed-array-names@1.1.0: {}
 

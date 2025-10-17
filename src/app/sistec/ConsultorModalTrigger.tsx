@@ -9,14 +9,14 @@ type Props = {
   className?: string;
   children?: React.ReactNode;
   selectedContent?: string;
-  whatsappNumber?: string; // ex: 5531999022636
+  whatsappNumber?: string;
 };
 
 export default function ConsultorModalTrigger({
   className = "",
   children = "Fale com um Consultor",
   selectedContent = "SISTEC-MEC – Verificação e Matrícula",
-  whatsappNumber = "5531999022636",
+  whatsappNumber = "559492740525",
 }: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [formStatus, setFormStatus] = useState<"form" | "loading" | "success">(

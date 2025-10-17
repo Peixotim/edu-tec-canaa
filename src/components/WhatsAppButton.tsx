@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
-  const phoneNumber = "5531999022636"; //Numero de redirecionamento
+  const phoneNumber = "5594927405256"; //Numero de redirecionamento
   const message = "Olá! Gostaria de saber mais sobre os cursos."; //Mensagem do whatsApp
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

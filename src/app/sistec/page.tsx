@@ -66,7 +66,7 @@ export default function PageSistecMec() {
                 <ConsultorModalTrigger
                   className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/0 px-5 py-3 font-semibold text-white/90 backdrop-blur-sm transition hover:bg-white/10"
                   selectedContent="SISTEC-MEC – Verificação e Matrícula"
-                  whatsappNumber="5531999022636"
+                  whatsappNumber="559492740525"
                 >
                   Fale com um Consultor
                 </ConsultorModalTrigger>
@@ -268,7 +268,7 @@ export default function PageSistecMec() {
               <ConsultorModalTrigger
                 className="inline-flex items-center justify-center rounded-2xl border border-white/15 px-5 py-3 font-semibold text-white/90 hover:bg-white/10"
                 selectedContent="SISTEC-MEC – Verificação e Matrícula"
-                whatsappNumber="5531999022636"
+                whatsappNumber="559492740525"
               >
                 Fale com um Consultor
               </ConsultorModalTrigger>
